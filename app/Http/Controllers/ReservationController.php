@@ -28,7 +28,7 @@ class ReservationController extends Controller
     public function create()
     {
         $vols = Vol::all();
-        return view('reserv.create', compact('vols')); 
+        return view('reserv.create', compact('vols'));
     }
 
     /**
@@ -61,7 +61,7 @@ class ReservationController extends Controller
     public function show($id)
     {
         $reservations = Reservation::findOrFail($id);
-        return view('show', compact('reservations'));
+        return view('reserv.show', compact('reservations'));
     }
 
     /**
